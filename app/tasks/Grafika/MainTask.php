@@ -7,6 +7,7 @@ use Xin\Cli\Color;
 
 class MainTask extends Task
 {
+    public $root = ROOT_PATH . '/images/';
 
     public function mainAction()
     {
@@ -17,7 +18,10 @@ class MainTask extends Task
         echo Color::colorize('  php run grafika:[command]', Color::FG_LIGHT_GREEN) . PHP_EOL . PHP_EOL;
 
         echo Color::head('Commands:') . PHP_EOL;
-        echo Color::colorize('  main@test       测试', Color::FG_LIGHT_GREEN) . PHP_EOL;
+        echo Color::colorize('  main@test           测试', Color::FG_LIGHT_GREEN) . PHP_EOL;
+        echo Color::colorize('  resize@fit          等比例缩放', Color::FG_LIGHT_GREEN) . PHP_EOL;
+        echo Color::colorize('  resize@exact        固定尺寸缩放', Color::FG_LIGHT_GREEN) . PHP_EOL;
+        echo Color::colorize('  resize@fill         居中裁剪', Color::FG_LIGHT_GREEN) . PHP_EOL;
     }
 
     public function testAction()
