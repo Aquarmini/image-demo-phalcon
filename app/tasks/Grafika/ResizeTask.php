@@ -40,5 +40,16 @@ class ResizeTask extends MainTask
         $editor->save($image1, $target);
     }
 
+    public function cropAction()
+    {
+        $image = $this->root . 'star.jpeg';
+        $target = $this->root . 'start.crop.jpeg';
+
+        $editor = Grafika::createEditor();
+        $editor->open($image1, $image); // 打开yanying.jpg并且存放到$image1
+        $editor->crop($image1, 500, 500, 'smart');
+        $editor->save($image1, $target);
+    }
+
 }
 
