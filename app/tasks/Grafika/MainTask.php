@@ -23,6 +23,7 @@ class MainTask extends Task
         echo Color::colorize('  resize@exact        固定尺寸缩放', Color::FG_LIGHT_GREEN) . PHP_EOL;
         echo Color::colorize('  resize@fill         居中裁剪', Color::FG_LIGHT_GREEN) . PHP_EOL;
         echo Color::colorize('  resize@crop         智能裁剪', Color::FG_LIGHT_GREEN) . PHP_EOL;
+        echo Color::colorize('  resize@sharpen      图片锐化', Color::FG_LIGHT_GREEN) . PHP_EOL;
     }
 
     public function testAction()
